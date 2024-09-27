@@ -1,5 +1,3 @@
-var query = new URLSearchParams(window.location.search)
-
 function sendMessage(message, sdcname){
     var data = {
         content: message,
@@ -20,7 +18,7 @@ function sendMessage(message, sdcname){
 function getMessage(){
     var xhr = new XMLHttpRequest();
     //https://127.0.0.1:8787/
-    xhr.open("GET", "http://"+query.get("api")+"/api/v9/channels/1233975886957510737/messages?limit=50", false);
+    xhr.open("GET", "http://"+location.search.replace("?api=")+"/api/v9/channels/1233975886957510737/messages?limit=50", false);
     xhr.onload = function () {
         var messages = JSON.parse(xhr.responseText)
         msgArea.innerHTML = '';
