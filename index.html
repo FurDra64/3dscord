@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #313338;
+            color: white;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        ol {
+            list-style-type: none;
+        }
+        ol li img {
+            position: absolute;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            left: 0px;
+        }
+        ol li div {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        h3 {
+            position: relative;
+        }
+        .timestamp {
+            font-size: .75rem;
+            color: rgb(148, 155, 164);
+        }
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<ol id=msgArea></ol>
+<input id=dcname type="text" value="名前"><br>
+<textarea style="width:95%;" id=ta></textarea>
+<button style="width:4%;" onclick="sendMessage(ta.value, dcname.value);">送信</button>
+</body>
+
+</html>
