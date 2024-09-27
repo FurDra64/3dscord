@@ -27,7 +27,7 @@ function getMessage(){
 			if(messages[i].author.avatar==null){avatarImage = "assets/avatar.png"}
             msgArea.innerHTML = "<li><a href=\""+avatarImage+"\"><img src=\""+avatarImage+"\"></a><h3><span class=\"username\">"+messages[i].author.username+"</span><span class=\"timestamp\">"+messages[i].timestamp+"</span></h3><div>"+messages[i].content+"</div></li>"+msgArea.innerHTML;
         };
-        timer = setTimeout(getMessage, 5000);
+        timer = setTimeout(getMessage, 10000);
     };
     xhr.send()
 }
