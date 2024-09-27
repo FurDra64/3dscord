@@ -4,7 +4,7 @@ function sendMessage(message, sdcname){
         username: sdcname,
     };
     var xhrSend = new XMLHttpRequest();
-    xhrSend.open("POST", "https://"+location.search.replace("?api=","")+"/api/webhooks/1234018970491949136/r3n16mZUU6NwJUGjWTGfAD7VdTD-dh0tTNdaNeg_yc83AgavWNtcRsCTyWAx4Fs5UjVt", false);
+    xhrSend.open("POST", "http://"+location.search.replace("?api=","")+"/api/webhooks/1234018970491949136/r3n16mZUU6NwJUGjWTGfAD7VdTD-dh0tTNdaNeg_yc83AgavWNtcRsCTyWAx4Fs5UjVt", false);
     xhrSend.setRequestHeader("Content-Type", "application/json");
     xhrSend.send(JSON.stringify(data))
     //以下long pollingじゃない場合に使用
